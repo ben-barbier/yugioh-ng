@@ -11,10 +11,25 @@ export class Tab1Page {
 
     public cardInfos: CardInfo[] = [];
 
+    public currentPage = 1;
+
     constructor(private cardInfoService: CardInfoService) {
-        cardInfoService.getAll().subscribe((cardInfosResponse: CardInfo[]) => {
+        this.loadCurrentPage();
+    }
+
+    public goToNextPage(): void {
+        this.currentPage = this.currentPage + 1;
+        this.loadCurrentPage();
+    }
+
+    public goToPreviousPage(): void {
+        this.currentPage = this.currentPage - 1;
+        this.loadCurrentPage();
+    }
+
+    private loadCurrentPage(): void {
+        this.cardInfoService.getAllByPage(this.currentPage).subscribe((cardInfosResponse: CardInfo[]) => {
             this.cardInfos = cardInfosResponse;
         });
     }
-
 }

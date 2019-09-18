@@ -17,4 +17,12 @@
             <p>{{cardInfo.desc}}</p>
         </ion-card-content>
     </ion-card>
+    <section>
+        <ion-button *ngIf="currentPage > 1" (click)="goToPreviousPage()">
+            <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+        <ion-button (click)="goToNextPage()">
+            <ion-icon name="arrow-forward"></ion-icon>
+        </ion-button>
+    </section>
 </ion-content>

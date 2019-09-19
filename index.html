@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Yugiho-ng</title>
+
+    <base href="/yugioh-ng/">
+    <meta name="viewport"
+          content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+
+    <link rel="icon" type="image/png" href="assets/icon/favicon.png"/>
+
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+    <script>
+      (function () {
+        // Retrieve the URL the user was trying to access when receiving the 404.
+        var redirect = sessionStorage.redirect;
+        // Remove the URL from sessionStorage.
+        delete sessionStorage.redirect;
+        // Check if we actually need to redirect.
+        if (redirect && redirect !== location.href) {
+          // We need to redirect to the URL the user was trying to access.
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+<link rel="stylesheet" href="styles.abd16dd5074d4331c849.css"></head>
+
+<body>
+<app-root></app-root>
+<script src="runtime-es2015.d0000bad8b4365c1025e.js" type="module"></script><script src="polyfills-es2015.2c66753e5baa3a247ac0.js" type="module"></script><script src="runtime-es5.122485232e24a7d8b0f0.js" nomodule></script><script src="polyfills-es5.f58a3e14b4d54cf17eac.js" nomodule></script><script src="main-es2015.49cf4d4f892ec9da2d7f.js" type="module"></script><script src="main-es5.f287e2bbd840292ca0a3.js" nomodule></script></body>
+
+</html>
